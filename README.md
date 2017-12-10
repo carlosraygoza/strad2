@@ -2,7 +2,7 @@
 Compilador realizado en el seminario de Traductores de Lenguajes 2
 ## Contenido
 
-A continuación se listan los símbolos que deberá reconocer el analizador léxico de tu proyecto:
+A continuación se listan los símbolos que deberá reconocer el analizador léxico:
 
 * Identificadores = letra (letra|digito)*  
 * Entero = digito+  
@@ -34,8 +34,10 @@ Lectura de archivo *.lr*  donde hace lectura de
 - Magnitud de matriz
 - Valores de matriz
 
-Va creando nodos para lograr el árbol sintáctico
-![-](www.suigeneris.org/UCABTI/attachments/321/79.gif "Árbol sintáctico")
+Va creando nodos para lograr el árbol sintáctico  
+
+![Arbol](/79.gif)  
+
 
 # EJEMPLO
 ### Entrada  
@@ -49,17 +51,17 @@ int main(){
 
 ### Gramática de pila
 - Inicio  
-  
-Pila: 	 $ 0   
+```
+Pila: $ 0   
 Token: int  
 accion: 5  
-  
+  ```
 - Final  
-
-Pila: 	 $ 0 programa 1   
+```
+Pila: $ 0 programa 1   
 Token: $  
 accion: -1  
-
+```
 
 ### Generación de código
 ```
@@ -68,11 +70,11 @@ d dword 0
 
 .code  
 main:  
-  push 3  
+push 3  
 pop eax  
-mov b, eax  
+mov d, eax  
 ret  
- print str$(eax)  
+print str$(eax)  
 print chr$(10)  
 exit  
 end main  
